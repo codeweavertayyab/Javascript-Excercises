@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       const shuffle = (array) =>{
+        let arr = [...array];
+        for(let i = arr.length; i>0; i--){
+            let j = Math.floor(Math.random() * (i+1));
+            [arr[i],arr[j]] = [arr[j],arr[i]]
+        }
+        return arr;
+       }
+       let myarr = [1,2,3,4,5,6,7,8,9];
+       document.write(shuffle(myarr))
+    </script>
+</body>
+</html>

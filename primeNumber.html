@@ -1,0 +1,17 @@
+<script>
+  let inputByUser = parseInt(prompt("Enter Number To Check Wheather It's Prime Or Not"));
+
+  if (inputByUser < 2) {
+    document.write(inputByUser, " is not a prime number.")
+  }
+  else {
+
+    for (let i = 2; i < inputByUser; i++) {
+      if (inputByUser % i === 0) {
+        document.write(inputByUser, " is not a prime number.")
+      }
+    }
+    document.write(inputByUser, " is a prime number.")
+  }
+
+</script>

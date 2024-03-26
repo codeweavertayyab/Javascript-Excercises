@@ -1,0 +1,11 @@
+<script>
+    const otpGenerator = (numOfDigits) => {
+        let num = '0123456789';
+        let otp = '';
+        for (let i = 0; i <= numOfDigits; i++) {
+            otp += num[Math.floor(Math.random() * 10)]
+        }
+        return otp;
+    }
+    console.log(otpGenerator(6));
+</script>

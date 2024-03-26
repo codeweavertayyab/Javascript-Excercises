@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <input autocomplete="off" type="text" id="search" />
+    <div id="result"></div>
+
+    <script>
+      const data = [
+        { id: 1, name: "Tayyab", email: "tayyab@gmail.com" },
+        { id: 2, name: "Ali", email: "ali@gmail.com" },
+        { id: 3, name: "Aliyan", email: "aliyan@gmail.com" },
+        { id: 4, name: "Shabeer", email: "shabeer@gmail.com" },
+      ];
+      let search = document.getElementById("search");
+      let result = document.getElementById("result");
+      let searchResult = "";
+
+      search.addEventListener("input", (e) => {
+        searchResult = e.target.value.toLowerCase();
+        showList();
+      });
+
+      const showList = () => {
+        result.innerHTML = "";
+        data.filter((item) => {
+            return (
+              item.id.toString().includes(searchResult) ||
+              item.name.toLowerCase().includes(searchResult) ||
+              item.email.toLowerCase().includes(searchResult)
+            );
+          })
+          .forEach((e) => {
+            let div = document.createElement("div");
+            div.innerHTML = `The Name is ${e.name} and the email is ${e.email}`;
+            result.appendChild(div);
+          });
+      };
+      showList();
+    </script>
+  </body>
+</html>

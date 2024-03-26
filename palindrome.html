@@ -1,0 +1,26 @@
+<script>
+  let inputString = prompt("Enter String: ");
+
+  inputString = inputString.toLowerCase();
+
+  let start = 0;
+  let end = inputString.length - 1;
+
+  let isPalindrome = true;
+
+  while (start < end) {
+    if (inputString[start] !== inputString[end]) {
+      isPalindrome = false;
+      break;
+    }
+
+    start++;
+    end--;
+  }
+
+  if (isPalindrome) {
+    console.log("The string is a palindrome.");
+  } else {
+    console.log("The string is not a palindrome.");
+  }
+</script>

@@ -1,0 +1,33 @@
+<script>
+    let inputNumber = parseInt(prompt("Enter Number: "));
+    let originalNumber = inputNumber;
+    let numDigits = 0;
+    let sum = 0;
+
+    let tempNumber = inputNumber;
+    while (tempNumber >= 0) {
+        tempNumber = parseInt(tempNumber / 10);
+        numDigits++
+    }
+    
+
+    tempNumber = inputNumber;
+    while (tempNumber > 0) {
+        let digit = tempNumber % 10;
+
+        let tempPower = 1;
+        for (let i = 0; i < numDigits; i++) {
+            tempPower z*= digit;
+        }
+
+        sum += tempPower;
+        tempNumber = parseInt(tempNumber / 10);
+    }
+    if (sum === originalNumber) {
+        console.log(originalNumber, " is a Armstrong Number.")
+    }
+    else {
+        console.log(originalNumber, " is not a Armstrong Number.")
+
+    }
+</script>

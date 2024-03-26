@@ -1,0 +1,21 @@
+<script>
+    let num = Number(prompt('Enter number'));
+
+    let round = 0;
+
+    if (num % 10 > 5) {
+        round = parseInt(num / 10) * 10 + 10;
+        console.log(round);
+
+    }
+    else if (num % 10 < 5) {
+        round = parseInt(num / 10) * 10 + 5;
+        console.log(round);
+
+    }
+    else {
+        console.log('number not valid');
+    }
+
+
+</script>

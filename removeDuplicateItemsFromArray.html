@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const myfun = (num) => {
+        let x,
+          len = num.length,
+          out = [],
+          obj = {};
+        for (x = 0; x <= len; x++) {
+          obj[num[x]] = 0;
+        }
+        for (x in obj) {
+          out.push(x);
+        }
+        return out;
+      };
+      let myarr = [1, 1, , 3, 3, 4];
+      console.log(myfun(myarr));
+    </script>
+  </body>
+</html>

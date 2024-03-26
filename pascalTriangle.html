@@ -1,0 +1,22 @@
+<script>
+    let numberOfRows = 5;
+
+    for (let i = 0; i < numberOfRows; i++) {
+        let row = '';
+        let coefficient = 1;
+
+        for (let j = 0; j < numberOfRows - i; j++) {
+            row += '&nbsp;';
+        }
+
+        for (let k = 0; k <= i; k++) {
+            if (k > 0) {
+                coefficient = coefficient * (i - k + 1) / k;
+            }
+            row += coefficient + ' ';
+        }
+
+        document.write(row + "<br>");
+    }
+</script>
+
